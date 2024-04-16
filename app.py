@@ -39,10 +39,13 @@ def extract_full():
     ptm_type = data['ptm_type']
 
     lst = [accession, protein_description, aas, mw, calc_pi, biological_process, cellular_component, molecular_function, kegg_pathways, sequence, domain_name, domain_sequence, ptm_position, ptm_residue, ptm_type]
-    lst2 = ["COL 1", "COL 2", "COL 7", "COL 8", "COL 9", "COL 10", "COL 11", "COL 12", "COL 13", "COL 19", "COL 20", "COL 21", "COL 22", "COL 23", "COL 24"]
+    lst2 = ["Accession", "Protein Description", "AAs", "MW [kDa]", "calc. pI", "Biological Process", "Cellular Component", "Molecular Function", "KEGG Pathways", "Sequence", "Domain name", "Domain sequence", "PTM Position", "PTM Residue", "PTM type"]
+    # lst2 = ["Accession", "Protein Description", "Abundance Ratio (log2): (S2, Sample) / (S4, Sample)", "Abundance Ratio (log2): (S1, Sample) / (S4, Sample)", "Abundance Ratio (log2): (S3, Sample) / (S4, Sample)", "Abundance Ratio (log2): (S4, Sample) / (CONTROL, Control)", "AAs", "MW [kDa]", "calc. pI", "Biological Process", "Cellular Component", "Molecular Function", "KEGG Pathways", "Found in Sample Group: CONTROL, Control", "Found in Sample Group: S2, Sample", "Found in Sample Group: S1, Sample", "Found in Sample Group: S3, Sample", "Found in Sample Group: S4, Sample", "Sequence", "Domain name", "Domain sequence", "PTM Position", "PTM Residue", "PTM type"]
+    
+    # lst2 = ["COL 1", "COL 2", "COL 7", "COL 8", "COL 9", "COL 10", "COL 11", "COL 12", "COL 13", "COL 19", "COL 20", "COL 21", "COL 22", "COL 23", "COL 24"]
     # print(lst)
 
-    query = "SELECT * FROM `database` WHERE "
+    query = "SELECT * FROM `yam` WHERE "
     for i in range (0, len(lst)):
         if (i == len(lst)-1):
             query = query + f" `{lst2[i]}` LIKE '%{lst[i]}%';"
