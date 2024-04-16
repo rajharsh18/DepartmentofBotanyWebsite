@@ -1,0 +1,93 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+figure, header, nav, section, article, aside, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+/* 
+---------------------------------------------
+Header Style
+--------------------------------------------- 
+*/
+
+header{
+    display: block;
+}
+
+.header-area {
+    position: relative;
+    background-color: #73007c;
+    /* height: 100px; */
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo-du img {
+    width: auto;
+    height: 80px;
+}
+
+/* 
+---------------------------------------------
+Nav Bar Style
+--------------------------------------------- 
+*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f9f9;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #2afcfc;
+}
+
+.active {
+    color: #e208db;
+}
+
+/* 
+---------------------------------------------
+Footer Style
+--------------------------------------------- 
+*/
+
+.footer {
+    position:relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+  
+.footer p {
+    margin: 0;
+    color: #b2b1b1;
+}

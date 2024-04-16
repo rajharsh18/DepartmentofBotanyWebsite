@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/styles-new.css">
+  <title>Test</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header class="header-area">
+    <div class="container-header">
+
+      <div class="logo-du">
+        <img src="../static/assets/new/DU.png" alt="Logo">
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/db" class="active">DB</a></li>
+          <!-- <li><a href="#">Services</a></li> -->
+          <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <form>
+    <label for="accession">Accession:</label>
+    <input type="text" id="accession" name="accession"><br>
+
+    <label for="protein_description">Protein Description:</label>
+    <input type="text" id="protein_description" name="protein_description"><br>
+
+    <label for="aas">AAs:</label>
+    <input type="text" id="aas" name="aas"><br>
+
+    <label for="mw">MW [kDa]:</label>
+    <input type="text" id="mw" name="mw"><br>
+
+    <label for="calc_pi">Calc. pI:</label>
+    <input type="text" id="calc_pi" name="calc_pi"><br>
+
+    <label for="biological_process">Biological Process:</label>
+    <input type="text" id="biological_process" name="biological_process"><br>
+
+    <label for="cellular_component">Cellular Component:</label>
+    <input type="text" id="cellular_component" name="cellular_component"><br>
+
+    <label for="molecular_function">Molecular Function:</label>
+    <input type="text" id="molecular_function" name="molecular_function"><br>
+
+    <label for="kegg_pathways">KEGG Pathways:</label>
+    <input type="text" id="kegg_pathways" name="kegg_pathways"><br>
+
+    <label for="sequence">Sequence:</label>
+    <input type="text" id="sequence" name="sequence"><br>
+
+    <label for="domain_name">Domain Name:</label>
+    <input type="text" id="domain_name" name="domain_name"><br>
+
+    <label for="domain_sequence">Domain Sequence:</label>
+    <input type="text" id="domain_sequence" name="domain_sequence"><br>
+
+    <label for="ptm_position">PTM Position:</label>
+    <input type="text" id="ptm_position" name="ptm_position"><br>
+
+    <label for="ptm_residue">PTM Residue:</label>
+    <input type="text" id="ptm_residue" name="ptm_residue"><br>
+
+    <label for="ptm_type">PTM Type:</label>
+    <input type="text" id="ptm_type" name="ptm_type"><br>
+  </form>
+
+  <button id="fetchDataButton">Fetch Data</button>
+  <div id="dataTable"></div>
+
+  <footer class="footer">
+    <div class="container-footer">
+      <p class="text-center">© 2024 Cluster Innovation Center. All Rights Reserved.</p>
+      <p class="text-center">Designed by Kritika Verma & Harsh Raj</p>
+    </div>
+  </footer>
+
+  <script src="../static/script-db.js"></script>
+  
+</body>
+</html>

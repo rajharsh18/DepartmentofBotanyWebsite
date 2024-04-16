@@ -1,0 +1,5 @@
+//<form action="/search_keyword.php">
+  //Enter a keyword to search for:<br>
+  <input type="text" id="fname" name="keyword"><br>
+  <input type="submit" value="Submit">
+</form>
