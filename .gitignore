@@ -3,3 +3,4 @@ __pycache__/
 static_old/
 templates/index_old.html
 templates/home.html
+trials/

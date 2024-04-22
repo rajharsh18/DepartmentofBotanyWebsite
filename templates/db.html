@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../static/styles-new.css">
+  <link rel="stylesheet" href="../static/card.css">
   <title>Test</title>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -13,13 +14,14 @@
     <div class="container-header">
 
       <div class="logo-du">
-        <img src="../static/assets/new/DU.png" alt="Logo">
+        <img src="../static/assets/DU.png" alt="Logo">
       </div>
 
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/db" class="active">DB</a></li>
+          <li><a href="/db-test">DB-Filter</a></li>
           <!-- <li><a href="#">Services</a></li> -->
           <!-- <li><a href="#">Contact</a></li> -->
         </ul>
@@ -27,8 +29,8 @@
     </div>
   </header>
 
-
-  <form>
+  <div class="filter">
+    <form>
     <label for="accession">Accession:</label>
     <input type="text" id="accession" name="accession"><br>
 
@@ -73,10 +75,10 @@
 
     <label for="ptm_type">PTM Type:</label>
     <input type="text" id="ptm_type" name="ptm_type"><br>
-  </form>
-
-  <button id="fetchDataButton">Fetch Data</button>
-  <div id="dataTable"></div>
+    </form>
+    <button id="fetchDataButton" class="fetchDataButton">Fetch Data</button>
+  </div>
+  <div id="container" class="container"></div>
 
   <footer class="footer">
     <div class="container-footer">

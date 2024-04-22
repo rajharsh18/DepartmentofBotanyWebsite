@@ -16,6 +16,11 @@ def index():
 def about():
     return render_template('db.html')
 
+# Route for the db-test page
+@app.route('/db-test')
+def db_test():
+    return render_template('db-filter.html')
+
 
 
 @app.route('/extract_full', methods=['POST'])
@@ -52,6 +57,22 @@ def extract_full():
         else:
             query = query + f" `{lst2[i]}` LIKE '%{lst[i]}%' AND"
     # query = "SELECT * FROM `database`;"
+    print(query)
+    status = helper.extract_table(query)
+    if "Error" in status:
+        return jsonify({'Error': status["Error"]})
+    else:
+        return jsonify(status)
+    
+
+@app.route('/filter', methods=['POST'])
+def filter():
+    data = request.get_json()
+
+    filter_name = data['filter_name']
+    filter = data['filter']
+
+    query = f"SELECT * FROM `yam` WHERE `{filter_name}` LIKE '%{filter}%';"
     print(query)
     status = helper.extract_table(query)
     if "Error" in status:

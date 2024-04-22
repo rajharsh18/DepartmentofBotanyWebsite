@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/styles-new.css">
+  <link rel="stylesheet" href="../static/card.css">
+  <title>Test</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header class="header-area">
+    <div class="container-header">
+
+      <div class="logo-du">
+        <img src="../static/assets/DU.png" alt="Logo">
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/db">DB</a></li>
+          <li><a href="/db-test" class="active">DB-Filter</a></li>
+          <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="filter">
+    <form>
+      <label for="filter_name">Select an option:</label>
+      <select id="filter_name" name="filter_name">
+        <option value="Select the Filter" selected>Select the Filter</option>
+        <option value="Accession">Accession</option>
+        <option value="Protein Description">Protein Description</option>
+        <option value="Abundance Ratio (log2): (S2, Sample) / (S4, Sample)">Abundance Ratio (log2): (S2, Sample) / (S4, Sample)</option>
+        <option value="Abundance Ratio (log2): (S1, Sample) / (S4, Sample)">Abundance Ratio (log2): (S1, Sample) / (S4, Sample)</option>
+        <option value="Abundance Ratio (log2): (S3, Sample) / (S4, Sample)">Abundance Ratio (log2): (S3, Sample) / (S4, Sample)</option>
+        <option value="Abundance Ratio (log2): (S4, Sample) / (CONTROL, Control)">Abundance Ratio (log2): (S4, Sample) / (CONTROL, Control)</option>
+        <option value="AAs">AAs</option>
+        <option value="MW [kDa]">MW [kDa]</option>
+        <option value="calc. pI">calc. pI</option>
+        <option value="Biological Process">Biological Process</option>
+        <option value="Cellular Component">Cellular Component</option>
+        <option value="Molecular Function">Molecular Function</option>
+        <option value="KEGG Pathways">KEGG Pathways</option>
+        <option value="Found in Sample Group: CONTROL, Control">Found in Sample Group: CONTROL, Control</option>
+        <option value="Found in Sample Group: S2, Sample">Found in Sample Group: S2, Sample</option>
+        <option value="Found in Sample Group: S1, Sample">Found in Sample Group: S1, Sample</option>
+        <option value="Found in Sample Group: S3, Sample">Found in Sample Group: S3, Sample</option>
+        <option value="Found in Sample Group: S4, Sample">Found in Sample Group: S4, Sample</option>
+        <option value="Sequence">Sequence</option>
+        <option value="Domain name">Domain name</option>
+        <option value="Domain sequence">Domain sequence</option>
+        <option value="PTM Position">PTM Position</option>
+        <option value="PTM Residue">PTM Residue</option>
+        <option value="PTM type">PTM type</option>
+      </select>
+      <label for="filter">Enter the Filter: </label>
+      <input type="text" id="filter" name="filter" required><br>
+    </form>
+    <button id="fetchDataButton" class="fetchDataButton">Fetch Data</button>
+  </div>
+
+  <div id="container" class="container"></div>
+
+  <footer class="footer">
+    <div class="container-footer">
+      <p class="text-center">© 2024 Cluster Innovation Center. All Rights Reserved.</p>
+      <p class="text-center">Designed by Kritika Verma & Harsh Raj</p>
+    </div>
+  </footer>
+
+  <script src="../static/script-db-filter.js"></script>
+  
+</body>
+</html>
